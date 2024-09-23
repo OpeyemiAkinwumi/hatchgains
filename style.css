@@ -12,6 +12,12 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 }
+p {
+  font-family: "Raleway", sans-serif;
+}
+button {
+  font-family: "Raleway", sans-serif;
+}
 
 .body {
   position: relative;
@@ -87,12 +93,23 @@ nav {
   border: none;
   font-family: "Raleway", sans-serif;
   font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.cta button:hover {
+  background-color: #163133;
 }
 
 #signBtn {
   background-color: transparent;
   color: black;
   border: 1px solid #204e51;
+}
+#signBtn:hover {
+  background-color: #F9C301;
+  color: white;
+  border: none;
+
 }
 .overlay {
   display: none;
@@ -126,7 +143,7 @@ nav {
     display: block;
     width: 100%;
     height: 100vh;
-    background-color: rgba(74, 73, 73, 0.196);
+    background-color: rgba(35, 35, 35, 0.505);
     /* filter: blur(2rem); */
     position: absolute;
     top: 0;
@@ -134,7 +151,7 @@ nav {
     right: 0;
     left: 0;
     margin: auto;
-    z-index: -1;
+    z-index: 10;
     display: none;
   }
   .dropdown {
@@ -150,7 +167,7 @@ nav {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 40;
+    z-index: 500;
     box-shadow: 1px 1px 5px 2px rgba(137, 137, 137, 0.121);
     margin-left: -60%;
   }
@@ -204,5 +221,125 @@ nav {
   }
 }
 
+.pop {
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation-name: pop;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  /* 100% {
+    transform: scale(1.2);
+  } */
+}
 
 /* <--- HERO SECTION ---> */
+.hero-section {
+  width: 100%;
+  height: 89vh;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.596),
+      rgba(0, 0, 0, 0.819)
+    ),
+    url(images/india-929719_1920.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-container h1 {
+  font-size: 4rem;
+  max-width: 70%;
+  text-align: center;
+}
+.hero-container p {
+  margin: 30px 0;
+}
+
+.hero-cta {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-cta button {
+  background-color: #204e51;
+  color: white;
+  width: 130px;
+  height: 40px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.hero-cta button:hover {
+  background-color: #163133;
+}
+#learnBtn {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.744);
+}
+#learnBtn:hover {
+  background-color: white;
+  border: none;
+  color: black;
+}
+
+@media screen and (max-width: 950px) {
+  .hero-container {
+    width: 90%;
+  }
+  .hero-container h1 {
+    max-width: 90%;
+    font-size: 3.5rem;
+  }
+  .hero-container p {
+    text-align: center;
+  }
+  
+}
+@media screen and (max-width: 600px) {
+ .hero-container {
+  width: 95%;
+ }
+  .hero-container h1 {
+   
+    font-size: 3rem;
+  }
+  
+}
+@media screen and (max-width: 480px) {
+ 
+  .hero-container h1 {
+   
+    font-size: 2rem;
+  }
+  p{
+    font-size: 0.8rem   ;
+  }
+
+  
+}
