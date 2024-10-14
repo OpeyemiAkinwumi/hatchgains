@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #204e51;
+  --secondary-color: #f9c301;
+}
+
 h1,
 h2,
 h3,
@@ -12,7 +17,8 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 }
-p {
+p,
+a {
   font-family: "Raleway", sans-serif;
 }
 button {
@@ -88,7 +94,7 @@ nav {
 .cta button {
   width: 120px;
   height: 45px;
-  background-color: #204e51;
+  background-color: var(--primary-color);
   color: white;
   border-radius: 10px;
   border: none;
@@ -104,10 +110,10 @@ nav {
 #signBtn {
   background-color: transparent;
   color: black;
-  border: 1px solid #204e51;
+  border: 1px solid var(--primary-color);
 }
 #signBtn:hover {
-  background-color: #f9c301;
+  background-color: var(--secondary-color);
   color: white;
   border: none;
 }
@@ -287,7 +293,7 @@ nav {
   align-items: center;
 }
 .hero-cta button {
-  background-color: #204e51;
+  background-color: var(--primary-color);
   color: white;
   width: 130px;
   height: 40px;
@@ -390,7 +396,7 @@ nav {
 .text-content button {
   width: 120px;
   height: 40px;
-  background-color: #204e51;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 8px;
@@ -466,10 +472,12 @@ nav {
 .container-three h2 {
   font-size: 2.2rem;
   color: #204e51;
+  text-align: center;
 }
 .container-three .oven {
-  max-width: 400px;
+  max-width: 500px;
   font-size: 0.8rem;
+  /* line-height: 20px; */
   letter-spacing: 1px;
   text-align: center;
   margin-top: 10px;
@@ -507,7 +515,7 @@ nav {
   font-size: 1.1rem;
   font-weight: 500;
   text-align: center;
-  color: #204E51;
+  color: #204e51;
 }
 
 @media screen and (max-width: 950px) {
@@ -549,10 +557,264 @@ nav {
 }
 
 @media screen and (max-width: 380px) {
-  .cards{
+  .cards {
     grid-template-columns: 1fr;
     grid-template-rows: 150px 150px 150px 150px;
     row-gap: 8px;
-  } 
+  }
+}
 
+/* Fourth Section */
+/* Fourth Section */
+
+#fourth-section {
+  height: 700px;
+  padding-bottom: 60px;
+}
+
+.product-cards {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 400px;
+  gap: 50px;
+}
+
+.product-content {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 3px rgb(211, 207, 207);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 20px; */
+  /* padding: 45px; */
+  padding: 40px 20px 30px 20px;
+}
+.pix-wrap {
+  width: 80%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.product-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-content p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--primary-color);
+}
+.text-wrap {
+  margin-top: 10px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-content .text {
+  /* max-width: 80%; */
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.container-three a {
+  color: var(--primary-color);
+  margin-top: 40px;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1200px) {
+  .product-cards {
+    padding-bottom: 0;
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #fourth-section {
+    height: auto;
+  }
+  .product-cards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+  }
+
+  .product-content {
+    padding: 20px;
+  }
+  .pix-wrap {
+    width: 100%;
+  }
+  .product-content .text {
+    /* max-width: 80%; */
+
+    font-size: 0.7rem;
+
+    line-height: 20px;
+  }
+}
+
+/* fifth section */
+/* fifth section */
+
+.fifth-section {
+  width: 100%;
+  height: 500px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(images/African-Catfish.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fifth-container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+}
+.fifth-container h2 {
+  max-width: 700px;
+  font-size: 3.5rem;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 760px) {
+  .fifth-container h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .fifth-container {
+    width: 92%;
+  }
+  .fifth-container h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* sixth section */
+/* sixth section */
+
+.expertise-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 60px 0; */
+  margin: 40px 0;
+}
+
+.expertise-container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expertise-text {
+  width: 50%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.expertise-text h2 {
+  color: var(--primary-color);
+  font-size: 4rem;
+}
+.expertise-text p {
+  max-width: 70%;
+  font-size: 0.8rem;
+  line-height: 20px;
+}
+.expertise-text a {
+  width: 180px;
+  height: 45px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+.expertise-text a:hover {
+  background-color: #163133;
+}
+
+.expertise-icons {
+  width: 50%;
+  height: 700px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-wrap {
+  width: 60%;
+  height: 125px;
+  /* background-color: rebeccapurple; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+.icon-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-image img {
+  width: 60%;
+}
+
+.icon-text h3  {
+font-size: 3rem;
+}
+.icon-text p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 10px;
 }
