@@ -811,6 +811,7 @@ nav {
 
 .icon-text h3  {
 font-size: 3rem;
+/* background-color: red; */
 }
 .icon-text p {
   font-size: 0.9rem;
@@ -818,3 +819,12 @@ font-size: 3rem;
   letter-spacing: 1px;
   margin-top: 10px;
 }
+
+@media screen and (max-width:950px) {
+  .expertise-section {
+    height: auto;
+  }
+}
+
+
+
